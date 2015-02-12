@@ -1,0 +1,23 @@
+<ion-view view-title="Popular" style="background-color: #2b2b2b">
+<ion-content>
+
+<style>
+	div, img {
+		padding:0px!important;
+	}
+	.col, .row {
+		margin-bottom:-3px!important;
+	}
+</style>
+
+<div ng-repeat="popmovie in popmovies" ng-if="$index%2==0">
+<div class="row">
+	<div class="col col-50">
+		<a href="http://coif.pw"><img style="width: 100%"src="http://image.tmdb.org/t/p/w500/{{popmovies[$index].poster_path}}" alt="{{popmovie.original_title}}"></a>
+</div><div class="col col-50">
+		<a href="http://coif.pw"><img style="width: 100%"src="http://image.tmdb.org/t/p/w500/{{popmovies[$index+1].poster_path}}" alt="{{popmovie.original_title}}"></a>
+	</div>
+</div>
+</div>
+</ion-content>
+</ion-view>

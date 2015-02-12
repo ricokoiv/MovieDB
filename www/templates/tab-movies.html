@@ -1,0 +1,22 @@
+<ion-view view-title="My Movies">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="movie in movies" type="item-text-wrap" href="#/tab/movies/{{movie.id}}">
+      <div class="row">
+      <div class="col">
+        <img style="max-width:70px;"ng-src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+        </div>
+        <div class="col col-75">
+        <h1 style="font-size: 30px; margin-top: 10px; margin-left: 10px;">{{movie.original_title}}</h1>
+        <p>{{release_date}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(movie)">
+          Delete
+        </ion-option-button>
+        </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
